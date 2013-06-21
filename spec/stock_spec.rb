@@ -14,4 +14,16 @@ describe Stock, "#ticker_value" do
         total_value.should == 827
     end
 
+    # it "should error out" do
+    #     a_stock = Stock.new(2, 2)
+    #     total_value = a_stock.stocks_value
+    #     total_value.should == 0
+    # end
+
+
+    it "should return zero" do
+        a_stock = Stock.new("ZZZZVZZT", 2)
+        total_value = a_stock.stocks_value
+        total_value.should == 0
+    end
 end
